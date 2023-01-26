@@ -11,14 +11,21 @@ public class AlternateSolution_1 {
 		String input1 = "(ab)(ab+)";
 		String input2 = "((a*b)";
 		String input3 = "(a+b)+(a-b)";
+		String input4 = "a+b";
+		String input5 = "(a+b)+c+(a-b)";
 
 		System.out.println(expressionValidation1(input));
 		System.out.println(expressionValidation1(input1));
 		System.out.println(expressionValidation1(input2));
 		System.out.println(expressionValidation1(input3));
+		System.out.println(expressionValidation1(input4));
+		System.out.println(expressionValidation1(input5));
 	}
 
 	public static boolean expressionValidation1(String s) {
+		if (s.length() < 3) {
+			return false;
+		}
 		Stack<Character> brackets = new Stack<>();
 		for (int i = 0; i < s.length(); i++) {
 
@@ -44,16 +51,18 @@ public class AlternateSolution_1 {
 			}
 
 			// To Check the symbols
-			if (s.charAt(i) < 'a' || s.charAt(i) > 'z') {
+			if (alp.indexOf(s.charAt(i)) == -1) {
 
 				// If the symbol not present in the string symbols it will return false
 				if (symbols.indexOf(s.charAt(i)) != -1) {
 
 					// character or brackets should be present before and after the symbol
 					// else false
-					if (alp.indexOf(s.charAt(i - 1)) != -1 && alp.indexOf(s.charAt(i + 1)) != -1) {
+					if ((alp.indexOf(s.charAt(i - 1)) != -1 && alp.indexOf(s.charAt(i + 1)) != -1)
+							|| (s.charAt(i - 1) == ')' && s.charAt(i + 1) == '(')) {
 						continue;
-					} else if (s.charAt(i - 1) == ')' && s.charAt(i + 1) == '(') {
+					} else if ((s.charAt(i - 1) == ')' || s.charAt(i + 1) == '(')
+							&& (alp.indexOf(s.charAt(i - 1)) != -1 || alp.indexOf(s.charAt(i + 1)) != -1)) {
 						continue;
 					} else {
 						return false;
@@ -65,7 +74,7 @@ public class AlternateSolution_1 {
 			}
 
 			// To check the characters
-			if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
+			if ((i != 0 && i != s.length() - 1) && alp.indexOf(s.charAt(i)) != -1) {
 				if (!(alp.indexOf(s.charAt(i - 1)) == -1 && alp.indexOf(s.charAt(i + 1)) == -1)) {
 					return false;
 				}
@@ -76,3 +85,4 @@ public class AlternateSolution_1 {
 		return brackets.isEmpty();
 	}
 }
+
