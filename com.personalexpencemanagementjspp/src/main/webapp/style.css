@@ -1,0 +1,168 @@
+@charset "ISO-8859-1";
+
+#inner{
+    border: 2px solid black;
+    color: white;
+    background-color: rgba(2, 2, 2, 0.76);
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 30%;
+    bottom: 30%;
+    left: 34%;
+    right: 34%;
+}
+
+#loginForm{
+    border: 2px solid black;
+    font-size: 17px;
+    position: absolute;
+    top: 15%;
+    height: 55%;
+    left: 20%;
+}
+
+#calculateform{
+    border: 2px solid black;
+    font-size: 17px;
+    position: absolute;
+    top: 25%;
+    height: 45%;
+    left: 15%;
+}
+
+#new,#daily{
+    position: absolute;
+    top: 17vh;
+}
+
+#daily{ 
+    left: 1vh;
+}
+
+#login:hover , #new:hover , #daily:hover{ 
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+#new{
+    left: 29vh;
+}
+
+#details{
+	
+}
+
+.buttons{
+    border: 1px solid #6f6f6f7e;
+    border-radius: 2px;
+    padding: 1px 2px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: white;
+    color:black;
+}
+
+#body{
+    margin: 0;
+    background-image: url("https://images2.alphacoders.com/924/924635.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#details{
+    border: 2px solid black;
+    color: white;
+    background-color: rgba(2, 2, 2, 0.76);
+    width:35%;
+    top: 20%;
+    left: 15%;
+    border-radius: 5px;
+    position: absolute;
+}
+
+#features{
+    position: absolute;
+    background-color: rgba(2, 2, 2, 0.76);
+    height: 100vh;
+    width: 30%;
+    margin-left: 70%;
+}
+
+#enterExpence{
+    color: white;
+    left: 10%;
+    border: 2px solid black;
+    position: absolute;
+    top: 45%;
+    height: 35%;
+    width: 80%;
+}
+
+#historyBlock{
+    color: white;
+    border: 2px solid black;
+    position: absolute;
+    top: 10%;
+    padding-left: 5%;
+    left: 10%;
+    height: 25%;
+    width: 74%;
+}
+
+#messageBlock{
+    margin-top: 30%;
+    color: white;
+    text-align: center;
+}
+
+#required{
+    margin-left: 8%;
+    border: 2px solid black;
+}
+
+#setbalance{
+	margin-top: 2%;
+    color: white;
+    text-align: center;
+}
+
+#newUserError{
+	margin-top: 36%;
+    color: white;
+    text-align: center;
+}
+
+#loginError{
+	margin-top: 45%;
+    color: white;
+    text-align: center;
+}
+
+#modify{
+    position: absolute;
+    left: 41%;
+    top: 5%;
+}
+
+#modificationform{
+    border: 2px solid black;
+    font-size: 17px;
+    position: absolute;
+    top: 15%;
+    height: 70%;
+    left: 20%;
+}
+
+#historytable{
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    background-color: rgba(2, 2, 2, 0.76);
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    border-collapse: collapse;
+    text-align: center;
+}
